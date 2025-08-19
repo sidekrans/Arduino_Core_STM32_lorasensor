@@ -14116,6 +14116,20 @@ LoRa.menu.pnum.LORA_E5_MINI.build.variant_h=variant_LORA_E5_MINI.h
 LoRa.menu.pnum.LORA_E5_MINI.openocd.target=stm32wlx
 LoRa.menu.pnum.LORA_E5_MINI.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WLxx/STM32WLE5_CM4.svd
 
+# LORASENSOR board
+LoRa.menu.pnum.LORASENSOR=lorasensor
+LoRa.menu.pnum.LORASENSOR.upload.maximum_size=262144
+LoRa.menu.pnum.LORASENSOR.upload.maximum_data_size=65536
+LoRa.menu.pnum.LORASENSOR.build.mcu=cortex-m4
+LoRa.menu.pnum.LORASENSOR.build.board=LORASENSOR
+LoRa.menu.pnum.LORASENSOR.build.series=STM32WLxx
+LoRa.menu.pnum.LORASENSOR.build.product_line=STM32WLE5xx
+LoRa.menu.pnum.LORASENSOR.build.variant=STM32WLxx/WL54JCI_WL55JCI_WLE4J(8-B-C)I_WLE5J(8-B-C)I
+LoRa.menu.pnum.LORASENSOR.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+LoRa.menu.pnum.LORASENSOR.build.variant_h=variant_LORASNSOR.h
+LoRa.menu.pnum.LORASENSOR.debug.server.openocd.scripts.2=target/stm32wlx.cfg
+LoRa.menu.pnum.LORASENSOR.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WLxx/STM32WLE5_CM4.svd
+
 # RAK3172 module
 LoRa.menu.pnum.RAK3172_MODULE=RAK3172 Module
 LoRa.menu.pnum.RAK3172_MODULE.upload.maximum_size=262144

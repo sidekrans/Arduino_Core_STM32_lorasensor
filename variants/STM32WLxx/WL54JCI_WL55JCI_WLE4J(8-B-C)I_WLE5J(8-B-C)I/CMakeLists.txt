@@ -23,10 +23,12 @@ add_library(variant_bin STATIC EXCLUDE_FROM_ALL
   PeripheralPins.c
   PeripheralPins_ELV_BM_TRX1.c
   PeripheralPins_LORA_E5_MINI.c
+  PeripheralPins_LORASENSOR.c
   variant_ELV_BM_TRX1.cpp
   variant_generic.cpp
   variant_LORA_E5_MINI.cpp
   variant_NUCLEO_WL55JC1.cpp
+  variant_LORASENSOR.cpp
 )
 target_link_libraries(variant_bin PUBLIC variant_usage)
 
