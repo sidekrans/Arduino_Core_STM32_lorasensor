@@ -5,7 +5,7 @@
 # https://arduino.github.io/arduino-cli/latest/platform-specification/
 
 name=STM32 boards groups (Board to be selected from Tools submenu 'Board part number')
-version=2.11.0-dev
+version=2.12.0-dev
 
 
 # Define variables used multiple times in platform file
@@ -117,6 +117,9 @@ upload.vid.0=0x0483
 upload.pid.0=0xdf11
 upload.vid={upload.vid.0}
 upload.pid={upload.pid.0}
+upload.address=0x8000000
+upload.mode=UR
+upload.start=0x8000000
 
 # To customize the USB manufacturer or product string, must add defines
 # for them, e.g.:

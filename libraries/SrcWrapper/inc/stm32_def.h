@@ -6,7 +6,7 @@
  * @brief STM32 core version number
  */
 #define STM32_CORE_VERSION_MAJOR    (0x02U) /*!< [31:24] major version */
-#define STM32_CORE_VERSION_MINOR    (0x0BU) /*!< [23:16] minor version */
+#define STM32_CORE_VERSION_MINOR    (0x0CU) /*!< [23:16] minor version */
 #define STM32_CORE_VERSION_PATCH    (0x00U) /*!< [15:8]  patch version */
 /*
  * Extra label for development:
@@ -58,6 +58,8 @@
   #include "stm32u3xx.h"
 #elif defined(STM32U5xx)
   #include "stm32u5xx.h"
+#elif defined(STM32WB0x)
+  #include "stm32wb0x.h"
 #elif defined(STM32WBxx)
   #include "stm32wbxx.h"
 #elif defined(STM32WBAxx)
@@ -222,6 +224,9 @@ __STATIC_INLINE void LL_RTC_SetBinMixBCDU(RTC_TypeDef *RTCx, uint32_t BinMixBcdU
   #define GPIO_AF7_USART3 ((uint8_t)0x07)
 #endif // STM32C0xx && !defined(USART3)
 
+#if defined(STM32WBAxx) && defined(USB_OTG_HS) && !defined(GPIO_AF4_USB_OTG_HS)
+  #define GPIO_AF4_USB_OTG_HS GPIO_AF4_OTG_HS
+#endif // STM32WBAxx && defined(USB_OTG_HS) && !defined(GPIO_AF4_USB_OTG_HS)
 
 /**
  * Libc porting layers

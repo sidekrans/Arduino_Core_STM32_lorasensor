@@ -907,6 +907,23 @@ Nucleo_64.menu.pnum.NUCLEO_U385RG_Q.build.variant=STM32U3xx/U375R(E-G)TxQ_U385RG
 #Nucleo_64.menu.pnum.NUCLEO_U385RG_Q.openocd.target=stm32u3x
 #Nucleo_64.menu.pnum.NUCLEO_U385RG_Q.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U3xx/STM32U3.svd
 
+# NUCLEO_WB09KE board
+Nucleo_64.menu.pnum.NUCLEO_WB09KE=Nucleo WB09KE
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.node="NOD_WB09KE"
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.upload.maximum_size=524288
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.upload.maximum_data_size=65536
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.mcu=cortex-m0plus
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.board=NUCLEO_WB09KE
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.series=STM32WB0x
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.product_line=STM32WB09
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.variant=STM32WB0x/WB05KZV_WB05TZF_WB09KEV_WB09TEF
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.build.st_extra_flags=-D{build.product_line} {build.xSerial} -D__CORTEX_SC=0
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.openocd.target=stm32wb0x
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WB0x/STM32WB09.svd
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.upload.address=0x10040000
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.upload.mode=hwRstPulse
+Nucleo_64.menu.pnum.NUCLEO_WB09KE.upload.start=0x10000000
+
 # NUCLEO_WB15CC
 Nucleo_64.menu.pnum.NUCLEO_WB15CC=Nucleo WB15CC
 Nucleo_64.menu.pnum.NUCLEO_WB15CC.node="NOD_WB15CC"
@@ -988,7 +1005,7 @@ Nucleo_64.menu.upload_method.MassStorage.upload.tool=massStorageCopy
 
 Nucleo_64.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
 Nucleo_64.menu.upload_method.swdMethod.upload.protocol=swd
-Nucleo_64.menu.upload_method.swdMethod.upload.options=
+Nucleo_64.menu.upload_method.swdMethod.upload.options=-a {upload.address} -m {upload.mode} -s {upload.start}
 Nucleo_64.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
 
 Nucleo_64.menu.upload_method.jlinkMethod=STM32CubeProgrammer (J-Link)
@@ -12482,6 +12499,60 @@ GenU0.openocd.target=stm32u0x
 GenU0.vid.0=0x0483
 GenU0.pid.0=0x5740
 
+# Generic U073C8Tx
+GenU0.menu.pnum.GENERIC_U073C8TX=Generic U073C8Tx
+GenU0.menu.pnum.GENERIC_U073C8TX.upload.maximum_size=65536
+GenU0.menu.pnum.GENERIC_U073C8TX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073C8TX.build.board=GENERIC_U073C8TX
+GenU0.menu.pnum.GENERIC_U073C8TX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073C8TX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073C8TX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U073C8Ux
+GenU0.menu.pnum.GENERIC_U073C8UX=Generic U073C8Ux
+GenU0.menu.pnum.GENERIC_U073C8UX.upload.maximum_size=65536
+GenU0.menu.pnum.GENERIC_U073C8UX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073C8UX.build.board=GENERIC_U073C8UX
+GenU0.menu.pnum.GENERIC_U073C8UX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073C8UX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073C8UX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U073CBTx
+GenU0.menu.pnum.GENERIC_U073CBTX=Generic U073CBTx
+GenU0.menu.pnum.GENERIC_U073CBTX.upload.maximum_size=131072
+GenU0.menu.pnum.GENERIC_U073CBTX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073CBTX.build.board=GENERIC_U073CBTX
+GenU0.menu.pnum.GENERIC_U073CBTX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073CBTX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073CBTX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U073CBUx
+GenU0.menu.pnum.GENERIC_U073CBUX=Generic U073CBUx
+GenU0.menu.pnum.GENERIC_U073CBUX.upload.maximum_size=131072
+GenU0.menu.pnum.GENERIC_U073CBUX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073CBUX.build.board=GENERIC_U073CBUX
+GenU0.menu.pnum.GENERIC_U073CBUX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073CBUX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073CBUX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U073CCTx
+GenU0.menu.pnum.GENERIC_U073CCTX=Generic U073CCTx
+GenU0.menu.pnum.GENERIC_U073CCTX.upload.maximum_size=262144
+GenU0.menu.pnum.GENERIC_U073CCTX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073CCTX.build.board=GENERIC_U073CCTX
+GenU0.menu.pnum.GENERIC_U073CCTX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073CCTX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073CCTX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U073CCUx
+GenU0.menu.pnum.GENERIC_U073CCUX=Generic U073CCUx
+GenU0.menu.pnum.GENERIC_U073CCUX.upload.maximum_size=262144
+GenU0.menu.pnum.GENERIC_U073CCUX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U073CCUX.build.board=GENERIC_U073CCUX
+GenU0.menu.pnum.GENERIC_U073CCUX.build.product_line=STM32U073xx
+GenU0.menu.pnum.GENERIC_U073CCUX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U073CCUX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
 # Generic U073R8Ix
 GenU0.menu.pnum.GENERIC_U073R8IX=Generic U073R8Ix
 GenU0.menu.pnum.GENERIC_U073R8IX.upload.maximum_size=65536
@@ -12535,6 +12606,24 @@ GenU0.menu.pnum.GENERIC_U073RCTX.build.board=GENERIC_U073RCTX
 GenU0.menu.pnum.GENERIC_U073RCTX.build.product_line=STM32U073xx
 GenU0.menu.pnum.GENERIC_U073RCTX.build.variant=STM32U0xx/U073R(8-B-C)(I-T)_U083RC(I-T)
 GenU0.menu.pnum.GENERIC_U073RCTX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U073.svd
+
+# Generic U083CCTx
+GenU0.menu.pnum.GENERIC_U083CCTX=Generic U083CCTx
+GenU0.menu.pnum.GENERIC_U083CCTX.upload.maximum_size=262144
+GenU0.menu.pnum.GENERIC_U083CCTX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U083CCTX.build.board=GENERIC_U083CCTX
+GenU0.menu.pnum.GENERIC_U083CCTX.build.product_line=STM32U083xx
+GenU0.menu.pnum.GENERIC_U083CCTX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U083CCTX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U083.svd
+
+# Generic U083CCUx
+GenU0.menu.pnum.GENERIC_U083CCUX=Generic U083CCUx
+GenU0.menu.pnum.GENERIC_U083CCUX.upload.maximum_size=262144
+GenU0.menu.pnum.GENERIC_U083CCUX.upload.maximum_data_size=40960
+GenU0.menu.pnum.GENERIC_U083CCUX.build.board=GENERIC_U083CCUX
+GenU0.menu.pnum.GENERIC_U083CCUX.build.product_line=STM32U083xx
+GenU0.menu.pnum.GENERIC_U083CCUX.build.variant=STM32U0xx/U073C(8-B-C)(T-U)_U083CC(T-U)
+GenU0.menu.pnum.GENERIC_U083CCUX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32U0xx/STM32U083.svd
 
 # Generic U083RCIx
 GenU0.menu.pnum.GENERIC_U083RCIX=Generic U083RCIx
@@ -13096,6 +13185,83 @@ GenWB.menu.upload_method.OpenOCDSTLink.upload.tool=openocd_upload
 GenWB.menu.upload_method.OpenOCDDapLink=OpenOCD DapLink (SWD)
 GenWB.menu.upload_method.OpenOCDDapLink.upload.protocol=cmsis-dap
 GenWB.menu.upload_method.OpenOCDDapLink.upload.tool=openocd_upload
+
+################################################################################
+# Generic WB0
+GenWB0.name=Generic STM32WB0 series
+
+GenWB0.build.core=arduino
+GenWB0.build.board=GenWB0
+GenWB0.build.st_extra_flags=-D{build.product_line} {build.xSerial} -D__CORTEX_SC=0
+GenWB0.build.mcu=cortex-m0plus
+GenWB0.build.series=STM32WB0x
+GenWB0.build.flash_offset=0x0
+GenWB0.upload.maximum_size=0
+GenWB0.upload.maximum_data_size=0
+GenWB0.openocd.target=stm32wb0x
+GenWB0.upload.address=0x10040000
+GenWB0.upload.mode=hwRstPulse
+GenWB0.upload.start=0x10000000
+
+# Generic WB05KZVx
+GenWB0.menu.pnum.GENERIC_WB05KZVX=Generic WB05KZVx
+GenWB0.menu.pnum.GENERIC_WB05KZVX.upload.maximum_size=196608
+GenWB0.menu.pnum.GENERIC_WB05KZVX.upload.maximum_data_size=24576
+GenWB0.menu.pnum.GENERIC_WB05KZVX.build.board=GENERIC_WB05KZVX
+GenWB0.menu.pnum.GENERIC_WB05KZVX.build.product_line=STM32WB05
+GenWB0.menu.pnum.GENERIC_WB05KZVX.build.variant=STM32WB0x/WB05KZV_WB05TZF_WB09KEV_WB09TEF
+GenWB0.menu.pnum.GENERIC_WB05KZVX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WB0x/STM32WB05.svd
+
+# Generic WB05TZFx
+GenWB0.menu.pnum.GENERIC_WB05TZFX=Generic WB05TZFx
+GenWB0.menu.pnum.GENERIC_WB05TZFX.upload.maximum_size=196608
+GenWB0.menu.pnum.GENERIC_WB05TZFX.upload.maximum_data_size=24576
+GenWB0.menu.pnum.GENERIC_WB05TZFX.build.board=GENERIC_WB05TZFX
+GenWB0.menu.pnum.GENERIC_WB05TZFX.build.product_line=STM32WB05
+GenWB0.menu.pnum.GENERIC_WB05TZFX.build.variant=STM32WB0x/WB05KZV_WB05TZF_WB09KEV_WB09TEF
+GenWB0.menu.pnum.GENERIC_WB05TZFX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WB0x/STM32WB05.svd
+
+# Generic WB09KEVx
+GenWB0.menu.pnum.GENERIC_WB09KEVX=Generic WB09KEVx
+GenWB0.menu.pnum.GENERIC_WB09KEVX.upload.maximum_size=524288
+GenWB0.menu.pnum.GENERIC_WB09KEVX.upload.maximum_data_size=65536
+GenWB0.menu.pnum.GENERIC_WB09KEVX.build.board=GENERIC_WB09KEVX
+GenWB0.menu.pnum.GENERIC_WB09KEVX.build.product_line=STM32WB09
+GenWB0.menu.pnum.GENERIC_WB09KEVX.build.variant=STM32WB0x/WB05KZV_WB05TZF_WB09KEV_WB09TEF
+GenWB0.menu.pnum.GENERIC_WB09KEVX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WB0x/STM32WB09.svd
+
+# Generic WB09TEFx
+GenWB0.menu.pnum.GENERIC_WB09TEFX=Generic WB09TEFx
+GenWB0.menu.pnum.GENERIC_WB09TEFX.upload.maximum_size=524288
+GenWB0.menu.pnum.GENERIC_WB09TEFX.upload.maximum_data_size=65536
+GenWB0.menu.pnum.GENERIC_WB09TEFX.build.board=GENERIC_WB09TEFX
+GenWB0.menu.pnum.GENERIC_WB09TEFX.build.product_line=STM32WB09
+GenWB0.menu.pnum.GENERIC_WB09TEFX.build.variant=STM32WB0x/WB05KZV_WB05TZF_WB09KEV_WB09TEF
+GenWB0.menu.pnum.GENERIC_WB09TEFX.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WB0x/STM32WB09.svd
+
+# Upload menu
+GenWB0.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
+GenWB0.menu.upload_method.swdMethod.upload.protocol=swd
+GenWB0.menu.upload_method.swdMethod.upload.options=-a {upload.address} -m {upload.mode} -s {upload.start}
+GenWB0.menu.upload_method.swdMethod.upload.tool=stm32CubeProg
+
+GenWB0.menu.upload_method.jlinkMethod=STM32CubeProgrammer (J-Link)
+GenWB0.menu.upload_method.jlinkMethod.upload.protocol=jlink
+GenWB0.menu.upload_method.jlinkMethod.upload.options=
+GenWB0.menu.upload_method.jlinkMethod.upload.tool=stm32CubeProg
+
+GenWB0.menu.upload_method.serialMethod=STM32CubeProgrammer (Serial)
+GenWB0.menu.upload_method.serialMethod.upload.protocol=serial
+GenWB0.menu.upload_method.serialMethod.upload.options=-c {serial.port.file}
+GenWB0.menu.upload_method.serialMethod.upload.tool=stm32CubeProg
+
+GenWB0.menu.upload_method.OpenOCDSTLink=OpenOCD STLink (SWD)
+GenWB0.menu.upload_method.OpenOCDSTLink.upload.protocol=stlink
+GenWB0.menu.upload_method.OpenOCDSTLink.upload.tool=openocd_upload
+
+GenWB0.menu.upload_method.OpenOCDDapLink=OpenOCD DapLink (SWD)
+GenWB0.menu.upload_method.OpenOCDDapLink.upload.protocol=cmsis-dap
+GenWB0.menu.upload_method.OpenOCDDapLink.upload.tool=openocd_upload
 
 ################################################################################
 # Generic WBA
@@ -14225,6 +14391,34 @@ LoRa.menu.pnum.ELEKTOR_F072CB.build.st_extra_flags=-D{build.product_line} {build
 LoRa.menu.pnum.ELEKTOR_F072CB.openocd.target=stm32f0x
 LoRa.menu.pnum.ELEKTOR_F072CB.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32F0xx/STM32F0x2.svd
 
+# Oceanus-I Module
+LoRa.menu.pnum.WE_OCEANUS1=Oceanus-I Module
+LoRa.menu.pnum.WE_OCEANUS1.upload.maximum_size=262144
+LoRa.menu.pnum.WE_OCEANUS1.upload.maximum_data_size=65536
+LoRa.menu.pnum.WE_OCEANUS1.build.mcu=cortex-m4
+LoRa.menu.pnum.WE_OCEANUS1.build.board=WE_OCEANUS1
+LoRa.menu.pnum.WE_OCEANUS1.build.series=STM32WLxx
+LoRa.menu.pnum.WE_OCEANUS1.build.product_line=STM32WLE5xx
+LoRa.menu.pnum.WE_OCEANUS1.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+LoRa.menu.pnum.WE_OCEANUS1.build.variant_h=variant_WE_OCEANUS1.h
+LoRa.menu.pnum.WE_OCEANUS1.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+LoRa.menu.pnum.WE_OCEANUS1.openocd.target=stm32wlx
+LoRa.menu.pnum.WE_OCEANUS1.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WLxx/STM32WLE5_CM4.svd
+
+# Oceanus-I EV
+LoRa.menu.pnum.WE_OCEANUS1_EV=Oceanus-I EV
+LoRa.menu.pnum.WE_OCEANUS1_EV.upload.maximum_size=262144
+LoRa.menu.pnum.WE_OCEANUS1_EV.upload.maximum_data_size=65536
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.mcu=cortex-m4
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.board=WE_OCEANUS1_EV
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.series=STM32WLxx
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.product_line=STM32WLE5xx
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.variant=STM32WLxx/WL54CCU_WL55CCU_WLE4C(8-B-C)U_WLE5C(8-B-C)U
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.variant_h=variant_WE_OCEANUS1_EV.h
+LoRa.menu.pnum.WE_OCEANUS1_EV.build.peripheral_pins=-DCUSTOM_PERIPHERAL_PINS
+LoRa.menu.pnum.WE_OCEANUS1_EV.openocd.target=stm32wlx
+LoRa.menu.pnum.WE_OCEANUS1_EV.debug.svd_file={runtime.tools.STM32_SVD.path}/svd/STM32WLxx/STM32WLE5_CM4.svd
+
 # Upload menu
 LoRa.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
 LoRa.menu.upload_method.swdMethod.upload.protocol=swd
@@ -14649,6 +14843,12 @@ GenWB.menu.xserial.none=Enabled (no generic 'Serial')
 GenWB.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
 GenWB.menu.xserial.disabled=Disabled (no Serial support)
 GenWB.menu.xserial.disabled.build.xSerial=
+
+GenWB0.menu.xserial.generic=Enabled (generic 'Serial')
+GenWB0.menu.xserial.none=Enabled (no generic 'Serial')
+GenWB0.menu.xserial.none.build.xSerial=-DHAL_UART_MODULE_ENABLED -DHWSERIAL_NONE
+GenWB0.menu.xserial.disabled=Disabled (no Serial support)
+GenWB0.menu.xserial.disabled.build.xSerial=
 
 GenWBA.menu.xserial.generic=Enabled (generic 'Serial')
 GenWBA.menu.xserial.none=Enabled (no generic 'Serial')
@@ -15610,6 +15810,26 @@ GenWB.menu.opt.ogstd.build.flags.optimize=-Og
 GenWB.menu.opt.o0std=No Optimization (-O0)
 GenWB.menu.opt.o0std.build.flags.optimize=-O0
 
+GenWB0.menu.opt.osstd=Smallest (-Os default)
+GenWB0.menu.opt.oslto=Smallest (-Os) with LTO
+GenWB0.menu.opt.oslto.build.flags.optimize=-Os -flto
+GenWB0.menu.opt.o1std=Fast (-O1)
+GenWB0.menu.opt.o1std.build.flags.optimize=-O1
+GenWB0.menu.opt.o1lto=Fast (-O1) with LTO
+GenWB0.menu.opt.o1lto.build.flags.optimize=-O1 -flto
+GenWB0.menu.opt.o2std=Faster (-O2)
+GenWB0.menu.opt.o2std.build.flags.optimize=-O2
+GenWB0.menu.opt.o2lto=Faster (-O2) with LTO
+GenWB0.menu.opt.o2lto.build.flags.optimize=-O2 -flto
+GenWB0.menu.opt.o3std=Fastest (-O3)
+GenWB0.menu.opt.o3std.build.flags.optimize=-O3
+GenWB0.menu.opt.o3lto=Fastest (-O3) with LTO
+GenWB0.menu.opt.o3lto.build.flags.optimize=-O3 -flto
+GenWB0.menu.opt.ogstd=Debug (-Og)
+GenWB0.menu.opt.ogstd.build.flags.optimize=-Og
+GenWB0.menu.opt.o0std=No Optimization (-O0)
+GenWB0.menu.opt.o0std.build.flags.optimize=-O0
+
 GenWBA.menu.opt.osstd=Smallest (-Os default)
 GenWBA.menu.opt.oslto=Smallest (-Os) with LTO
 GenWBA.menu.opt.oslto.build.flags.optimize=-Os -flto
@@ -16087,6 +16307,14 @@ GenWB.menu.dbg.enable_log.build.flags.debug=
 GenWB.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
 GenWB.menu.dbg.enable_all.build.flags.debug=-g
 
+GenWB0.menu.dbg.none=None
+GenWB0.menu.dbg.enable_sym=Symbols Enabled (-g)
+GenWB0.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
+GenWB0.menu.dbg.enable_log=Core logs Enabled
+GenWB0.menu.dbg.enable_log.build.flags.debug=
+GenWB0.menu.dbg.enable_all=Core Logs and Symbols Enabled (-g)
+GenWB0.menu.dbg.enable_all.build.flags.debug=-g
+
 GenWBA.menu.dbg.none=None
 GenWBA.menu.dbg.enable_sym=Symbols Enabled (-g)
 GenWBA.menu.dbg.enable_sym.build.flags.debug=-g -DNDEBUG
@@ -16449,6 +16677,16 @@ GenWB.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
 GenWB.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
 GenWB.menu.rtlib.full=Newlib Standard
 GenWB.menu.rtlib.full.build.flags.ldspecs=
+
+GenWB0.menu.rtlib.nano=Newlib Nano (default)
+GenWB0.menu.rtlib.nanofp=Newlib Nano + Float Printf
+GenWB0.menu.rtlib.nanofp.build.flags.ldspecs=--specs=nano.specs -u _printf_float
+GenWB0.menu.rtlib.nanofs=Newlib Nano + Float Scanf
+GenWB0.menu.rtlib.nanofs.build.flags.ldspecs=--specs=nano.specs -u _scanf_float
+GenWB0.menu.rtlib.nanofps=Newlib Nano + Float Printf/Scanf
+GenWB0.menu.rtlib.nanofps.build.flags.ldspecs=--specs=nano.specs -u _printf_float -u _scanf_float
+GenWB0.menu.rtlib.full=Newlib Standard
+GenWB0.menu.rtlib.full.build.flags.ldspecs=
 
 GenWBA.menu.rtlib.nano=Newlib Nano (default)
 GenWBA.menu.rtlib.nanofp=Newlib Nano + Float Printf
