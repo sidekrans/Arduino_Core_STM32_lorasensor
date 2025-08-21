@@ -82,24 +82,6 @@
 #define NUM_DIGITAL_PINS        43
 #define NUM_ANALOG_INPUTS       12
 
-// On-board LED pin number
-#define LED1                    PB15
-#define LED2                    PB9
-#define LED3                    PB11
-#ifndef LED_BUILTIN
-  #define LED_BUILTIN           LED1
-#endif
-#define LED_BLUE                LED1
-#define LED_GREEN               LED2
-#define LED_RED                 LED3
-
-// On-board user button
-#define B1_BTN                  PA0 // PC13 (!SB16 SB15)
-#define B2_BTN                  PA1
-#define B3_BTN                  PC6
-#ifndef USER_BTN
-  #define USER_BTN              B1_BTN
-#endif
 
 // Timer Definitions
 // Use TIM6/TIM7 when possible as servo and tone don't need GPIO output pin
